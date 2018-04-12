@@ -13,77 +13,77 @@ const SignContainer = styled.div`
 `;
 
 const styles = {
-    item : {
+    item: {
         display: 'inline-block',
-        width : '23%',
+        width: '23%',
         marginLeft: '5%',
         marginRight: '5%',
     }
 }
 const customUnderLineStyle = {
-    borderColor : 'black'
+    borderColor: 'black'
 }
 export default class AgreementSection extends React.Component {
     render() {
 
-       var myProps = this.props;
-       var compPropData = myProps.data;
+        var myProps = this.props;
+        var compPropData = myProps.data;
 
-       return (
-          <SignContainer>
-            <h3 className={"form-title"}>Agreement Section</h3>
-            <MuiThemeProvider>
-                <TextField
-                    hintText="Client Signature"
-                    floatingLabelText="Client Signature"
-                    type="text"
-                    value = {compPropData.clientSignature}
-                    onChange={(e) => myProps.onChange("Agreements",'clientSignature',e.target.value)}
-                    className = "inline-component"
-                    style={styles.item}
-                    underlineStyle = {customUnderLineStyle}
-                    
-                />
-                <DatePicker hintText="Date" className="inline-component" style={styles.item} 
-                    value = {compPropData.clientdate}
-                    onChange={(e,value) => myProps.onChange("Agreements",'clientdate',value)} 
-                    underlineStyle = {customUnderLineStyle}/>
-                <Toggle
-                    label="Sign State"
-                    style={styles.item}
-                    underlineStyle = {customUnderLineStyle}
-                    value = {compPropData.signState}
-                    onToggle={(e,value) => myProps.onChange("Agreements",'signState',value)}
-                />
-                <br/>
-                <TextField
-                    hintText="Producer Signature"
-                    floatingLabelText="Producer Signature"
-                    type="text"
-                    value = {compPropData.producerSignature}
-                    onChange={(e) => myProps.onChange("Agreements",'producerSignature',e.target.value)}
-                    className = "inline-component"
-                    style={styles.item}
-                    underlineStyle = {customUnderLineStyle}
-                />
-                <DatePicker hintText="Date" className="inline-component" style={styles.item} 
-                    value = {compPropData.producerDate}
-                    onChange={(e,value) => myProps.onChange("Agreements",'producerDate',value)} 
-                    underlineStyle = {customUnderLineStyle}/>
-                <br/>
-                <TextField
-                    hintText="Producer Number"
-                    floatingLabelText="Producer Number"
-                    type="text"
-                    value = {compPropData.producerNumber}
-                    onChange={(e) => myProps.onChange("Agreements",'producerNumber',e.target.value)}
-                    className = "inline-component"
-                    style={styles.item}
-                    underlineStyle = {customUnderLineStyle}
-                />
-            </MuiThemeProvider>
-            <hr/>
-          </SignContainer>
-       );
+        return (
+            <SignContainer>
+                <h3 className={"form-title"}>Agreement Section</h3>
+                <MuiThemeProvider>
+                    <TextField
+                        hintText="Client Signature"
+                        floatingLabelText="Client Signature"
+                        type="text"
+                        value={compPropData.clientSignature}
+                        onChange={(e) => myProps.onChange("Agreements", 'clientSignature', e.target.value)}
+                        className="inline-component"
+                        style={styles.item}
+                        underlineStyle={customUnderLineStyle}
+
+                    />
+                    <DatePicker hintText="Date" className="inline-component" style={styles.item}
+                                value={compPropData.clientdate}
+                                onChange={(e, value) => myProps.onChange("Agreements", 'clientdate', value)}
+                                underlineStyle={customUnderLineStyle}/>
+                    <Toggle
+                        label="Sign State"
+                        style={styles.item}
+                        underlineStyle={customUnderLineStyle}
+                        value={compPropData.signState}
+                        onToggle={(e, value) => myProps.onChange("Agreements", 'signState', value)}
+                    />
+                    <br/>
+                    <TextField
+                        hintText="Producer Signature"
+                        floatingLabelText="Producer Signature"
+                        type="text"
+                        value={compPropData.producerSignature}
+                        onChange={(e) => myProps.onChange("Agreements", 'producerSignature', e.target.value)}
+                        className="inline-component"
+                        style={styles.item}
+                        underlineStyle={customUnderLineStyle}
+                    />
+                    <DatePicker hintText="Date" className="inline-component" style={styles.item}
+                                value={compPropData.producerDate}
+                                onChange={(e, value) => myProps.onChange("Agreements", 'producerDate', value)}
+                                underlineStyle={customUnderLineStyle}/>
+                    <br/>
+                    <TextField
+                        hintText="Producer Number"
+                        floatingLabelText="Producer Number"
+                        type="text"
+                        value={compPropData.producerNumber}
+                        onChange={(e) => myProps.onChange("Agreements", 'producerNumber', e.target.value)}
+                        className="inline-component"
+                        style={styles.item}
+                        underlineStyle={customUnderLineStyle}
+                    />
+                </MuiThemeProvider>
+                <hr/>
+            </SignContainer>
+        );
     }
- }
+}
