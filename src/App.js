@@ -74,9 +74,6 @@ class App extends Component {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(formObject)
-        }).then(function(response) {
-            console.log(response.json());
-            return response.json();
         })
     }
 
