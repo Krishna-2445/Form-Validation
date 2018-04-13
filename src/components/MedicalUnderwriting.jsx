@@ -46,8 +46,8 @@ export default class MedicalUnderwriting extends React.Component {
                         hintText="Feet Height"
                         floatingLabelText="Feet Height"
                         type="text"
-                        value={compPropData.heightFeet}
-                        onChange={(e) => myProps.onChange("Medical", 'heightFeet', e.target.value)}
+                        value={compPropData.height_ft}
+                        onChange={(e) => myProps.onChange("medical", 'height_ft', e.target.value)}
                         className="inline-component"
                         underlineStyle={customUnderLineStyle}
                     />
@@ -55,8 +55,8 @@ export default class MedicalUnderwriting extends React.Component {
                         hintText="Inches"
                         floatingLabelText="Inches"
                         type="text"
-                        value={compPropData.heightInch}
-                        onChange={(e) => myProps.onChange("Medical", 'heightInch', e.target.value)}
+                        value={compPropData.height_inches}
+                        onChange={(e) => myProps.onChange("medical", 'height_inches', e.target.value)}
                         className="inline-component"
                         underlineStyle={customUnderLineStyle}
                     />
@@ -65,7 +65,7 @@ export default class MedicalUnderwriting extends React.Component {
                         floatingLabelText="Weight(lbs)"
                         type="text"
                         value={compPropData.weight}
-                        onChange={(e) => myProps.onChange("Medical", 'weight', e.target.value)}
+                        onChange={(e) => myProps.onChange("medical", 'weight', e.target.value)}
                         className="inline-component"
                         underlineStyle={customUnderLineStyle}
                     />
@@ -75,25 +75,25 @@ export default class MedicalUnderwriting extends React.Component {
                         label="Do you have diabetes? (Y/N)"
                         style={styles.check_container}
                         value={compPropData.diabetes}
-                        onToggle={(e, value) => myProps.onChange("Medical", 'diabetes', value)}
+                        onToggle={(e, value) => myProps.onChange("medical", 'diabetes', value)}
                     />
                     <Toggle
                         label="Have you been hospitalized in the last 12 months? (Y/N)"
                         style={styles.check_container}
-                        value={compPropData.isHospitized12M}
-                        onToggle={(e, value) => myProps.onChange("Medical", 'isHospitized12M', value)}
+                        value={compPropData.hospitalized}
+                        onToggle={(e, value) => myProps.onChange("medical", 'hospitalized', value)}
                     />
                     <Toggle
                         label="&emsp;&emsp;&emsp;&emsp;Did you miss work as a result? (Y/N)"
                         style={styles.check_container}
                         value={compPropData.missWork}
-                        onToggle={(e, value) => myProps.onChange("Medical", 'missWork', value)}
+                        onToggle={(e, value) => myProps.onChange("medical", 'missWork', value)}
                     />
                     <Toggle
                         label="Have you seen a doctor for any other reason? (Y/N)"
                         style={styles.check_container}
-                        value={compPropData.seenDoctor}
-                        onToggle={(e, value) => myProps.onChange("Medical", 'seenDoctor', value)}
+                        value={compPropData.seen_doctor}
+                        onToggle={(e, value) => myProps.onChange("medical", 'seen_doctor', value)}
                     />
                 </CheckInfo>
                 <hr/>

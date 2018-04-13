@@ -10,39 +10,38 @@ import PlanDesign from './components/PlanDesign'
 class App extends Component {
     constructor(props) {
         super(props);
-
         this.state = {
-            DemoGraphics: {
-                firstName: '',
-                lastName: '',
+            demoGraphics: {
+                first_name: '',
+                last_name: '',
                 address: '',
                 state: '',
-                zip: '',
+                zipcode: '',
                 gender: '',
-                birthDate: '',
+                dob: '',
                 income: '',
                 occupation: ''
             },
-            Bill: {
+            bill: {
                 mode: '',
                 modalPremium: '',
                 renewalMonth: 1
             },
-            Medical: {
-                heightFeet: '',
-                heightInch: '',
+            medical: {
+                height_ft: '',
+                height_inches: '',
                 weight: '',
                 diabetes: false,
-                isHospitized12M: false,
+                hospitalized: false,
                 missWork: false,
-                seenDoctor: false
+                seen_doctor: false
             },
-            PlanDesign: {
-                monthlyBenefit: '',
+            planDesign: {
+                basemoben: '',
                 FIO: false,
                 occupationRider: false
             },
-            Agreements: {
+            agreements: {
                 clientSignature: '',
                 clientdate: '',
                 producerSignature: '',
@@ -68,8 +67,17 @@ class App extends Component {
 
     onSubmit() {
         var formObject = this.state;
-        console.log(formObject);
-        alert("Value has been written on console!");
+        fetch('http://localhost:8080/createPolicy', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formObject)
+        }).then(function(response) {
+            console.log(response.json());
+            return response.json();
+        })
     }
 
     render() {
@@ -77,11 +85,11 @@ class App extends Component {
         var myState = this.state;
         return (
             <div className="App">
-                <DemoGraphics data={myState.DemoGraphics} onChange={this.handleChange}/>
-                <MedicalUnderwriting data={myState.Medical} onChange={this.handleChange}/>
-                <PlanDesign data={myState.PlanDesign} onChange={this.handleChange}/>
-                <Biling data={myState.Bill} onChange={this.handleChange}/>
-                <AgreementSection data={myState.Agreements} onChange={this.handleChange}/>
+                <DemoGraphics data={myState.demoGraphics} onChange={this.handleChange}/>
+                <MedicalUnderwriting data={myState.medical} onChange={this.handleChange}/>
+                <PlanDesign data={myState.planDesign} onChange={this.handleChange}/>
+                <Biling data={myState.bill} onChange={this.handleChange}/>
+                <AgreementSection data={myState.agreements} onChange={this.handleChange}/>
                 <br/>
                 <br/>
                 <br/>

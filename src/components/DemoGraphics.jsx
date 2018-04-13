@@ -37,8 +37,8 @@ export default class DemoGraphics extends React.Component {
                         hintText="First Name"
                         floatingLabelText="First Name"
                         type="text"
-                        value={compPropData.firstName}
-                        onChange={(e) => myProps.onChange("DemoGraphics", 'firstName', e.target.value)}
+                        value={compPropData.first_name}
+                        onChange={(e) => myProps.onChange("demoGraphics", 'first_name', e.target.value)}
                         className="inline-component"
                         underlineStyle={customUnderLineStyle}
                     />
@@ -46,8 +46,8 @@ export default class DemoGraphics extends React.Component {
                         hintText="Last Name"
                         floatingLabelText="Last Name"
                         type="text"
-                        value={compPropData.lastName}
-                        onChange={(e) => myProps.onChange("DemoGraphics", 'lastName', e.target.value)}
+                        value={compPropData.last_name}
+                        onChange={(e) => myProps.onChange("demoGraphics", 'last_name', e.target.value)}
                         className="inline-component"
                         underlineStyle={customUnderLineStyle}
                     />
@@ -58,27 +58,27 @@ export default class DemoGraphics extends React.Component {
                         floatingLabelText="Number/Street Address"
                         type="text"
                         value={compPropData.address}
-                        onChange={(e) => myProps.onChange("DemoGraphics", 'address', e.target.value)}
+                        onChange={(e) => myProps.onChange("demoGraphics", 'address', e.target.value)}
                         className="inline-component"
                         underlineStyle={customUnderLineStyle}
                     />
                     <SelectField
                         floatingLabelText="State"
                         value={compPropData.state}
-                        onChange={(e, index, value) => myProps.onChange("DemoGraphics", 'state', value)}
+                        onChange={(e, index, value) => myProps.onChange("demoGraphics", 'state', value)}
                         className="inline-component"
                         underlineStyle={customUnderLineStyle}
                     >
-                        <MenuItem value={1} primaryText="NE"/>
-                        <MenuItem value={2} primaryText="CA"/>
+                        <MenuItem value="NE" primaryText="NE"/>
+                        <MenuItem value="CA" primaryText="CA"/>
 
                     </SelectField>
                     <TextField
                         hintText="Zip"
                         floatingLabelText="Zip"
                         type="text"
-                        value={compPropData.zip}
-                        onChange={(e) => myProps.onChange("DemoGraphics", 'zip', e.target.value)}
+                        value={compPropData.zipcode}
+                        onChange={(e) => myProps.onChange("demoGraphics", 'zipcode', e.target.value)}
                         className="inline-component"
                         underlineStyle={customUnderLineStyle}
                     />
@@ -87,16 +87,16 @@ export default class DemoGraphics extends React.Component {
                     <SelectField
                         floatingLabelText="Gender"
                         value={compPropData.gender}
-                        onChange={(e, i, value) => myProps.onChange("DemoGraphics", 'gender', value)}
+                        onChange={(e, i, value) => myProps.onChange("demoGraphics", 'gender', value)}
                         className="inline-component"
                         underlineStyle={customUnderLineStyle}
                     >
-                        <MenuItem value={1} primaryText="Male"/>
-                        <MenuItem value={2} primaryText="Female"/>
+                        <MenuItem value="Male" primaryText="Male"/>
+                        <MenuItem value="Female" primaryText="Female"/>
                     </SelectField>
                     <DatePicker hintText="Date of Birth"
-                                value={compPropData.birthDate}
-                                onChange={(e, value) => myProps.onChange("DemoGraphics", 'birthDate', value)}
+                                value={compPropData.dob}
+                                onChange={(e, value) => myProps.onChange("demoGraphics", 'dob', value)}
                                 className="inline-component" style={{width: "16%"}}
                                 underlineStyle={customUnderLineStyle}/>
 
@@ -105,7 +105,7 @@ export default class DemoGraphics extends React.Component {
                         floatingLabelText="Income"
                         type="text"
                         value={compPropData.income}
-                        onChange={(e) => myProps.onChange("DemoGraphics", 'income', e.target.value)}
+                        onChange={(e) => myProps.onChange("demoGraphics", 'income', e.target.value)}
                         className="inline-component"
                         underlineStyle={customUnderLineStyle}
                     />
@@ -113,16 +113,16 @@ export default class DemoGraphics extends React.Component {
                     <SelectField
                         floatingLabelText="Occupation"
                         value={compPropData.occupation}
-                        onChange={(e, i, value) => myProps.onChange("DemoGraphics", 'occupation', value)}
+                        onChange={(e, i, value) => myProps.onChange("demoGraphics", 'occupation', value)}
                         className="inline-component"
                         underlineStyle={customUnderLineStyle}
                     >
-                        <MenuItem value={1} primaryText="1A"/>
-                        <MenuItem value={2} primaryText="2A"/>
-                        <MenuItem value={3} primaryText="3A"/>
-                        <MenuItem value={4} primaryText="4A"/>
-                        <MenuItem value={5} primaryText="5A"/>
-                        <MenuItem value={6} primaryText="6A"/>
+                        <MenuItem value="1A" primaryText="1A"/>
+                        <MenuItem value="2A" primaryText="2A"/>
+                        <MenuItem value="3A" primaryText="3A"/>
+                        <MenuItem value="4A" primaryText="4A"/>
+                        <MenuItem value="5A" primaryText="5A"/>
+                        <MenuItem value="6A" primaryText="6A"/>
                     </SelectField>
                 </AddrInfo>
                 <hr/>

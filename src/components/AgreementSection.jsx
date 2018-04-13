@@ -38,7 +38,7 @@ export default class AgreementSection extends React.Component {
                         floatingLabelText="Client Signature"
                         type="text"
                         value={compPropData.clientSignature}
-                        onChange={(e) => myProps.onChange("Agreements", 'clientSignature', e.target.value)}
+                        onChange={(e) => myProps.onChange("agreements", 'clientSignature', e.target.value)}
                         className="inline-component"
                         style={styles.item}
                         underlineStyle={customUnderLineStyle}
@@ -46,14 +46,14 @@ export default class AgreementSection extends React.Component {
                     />
                     <DatePicker hintText="Date" className="inline-component" style={styles.item}
                                 value={compPropData.clientdate}
-                                onChange={(e, value) => myProps.onChange("Agreements", 'clientdate', value)}
+                                onChange={(e, value) => myProps.onChange("agreements", 'clientdate', value)}
                                 underlineStyle={customUnderLineStyle}/>
                     <Toggle
                         label="Sign State"
                         style={styles.item}
                         underlineStyle={customUnderLineStyle}
                         value={compPropData.signState}
-                        onToggle={(e, value) => myProps.onChange("Agreements", 'signState', value)}
+                        onToggle={(e, value) => myProps.onChange("agreements", 'signState', value)}
                     />
                     <br/>
                     <TextField
@@ -61,14 +61,14 @@ export default class AgreementSection extends React.Component {
                         floatingLabelText="Producer Signature"
                         type="text"
                         value={compPropData.producerSignature}
-                        onChange={(e) => myProps.onChange("Agreements", 'producerSignature', e.target.value)}
+                        onChange={(e) => myProps.onChange("agreements", 'producerSignature', e.target.value)}
                         className="inline-component"
                         style={styles.item}
                         underlineStyle={customUnderLineStyle}
                     />
                     <DatePicker hintText="Date" className="inline-component" style={styles.item}
                                 value={compPropData.producerDate}
-                                onChange={(e, value) => myProps.onChange("Agreements", 'producerDate', value)}
+                                onChange={(e, value) => myProps.onChange("agreements", 'producerDate', value)}
                                 underlineStyle={customUnderLineStyle}/>
                     <br/>
                     <TextField
@@ -76,7 +76,7 @@ export default class AgreementSection extends React.Component {
                         floatingLabelText="Producer Number"
                         type="text"
                         value={compPropData.producerNumber}
-                        onChange={(e) => myProps.onChange("Agreements", 'producerNumber', e.target.value)}
+                        onChange={(e) => myProps.onChange("agreements", 'producerNumber', e.target.value)}
                         className="inline-component"
                         style={styles.item}
                         underlineStyle={customUnderLineStyle}

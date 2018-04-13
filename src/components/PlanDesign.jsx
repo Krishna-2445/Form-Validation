@@ -45,8 +45,8 @@ export default class PlanDesign extends React.Component {
                         hintText="Base Monthly Benefit"
                         floatingLabelText="Base Monthly Benefit"
                         type="text"
-                        value={compPropData.monthlyBenefit}
-                        onChange={(e) => myProps.onChange("PlanDesign", 'monthlyBenefit', e.target.value)}
+                        value={compPropData.basemoben}
+                        onChange={(e) => myProps.onChange("planDesign", 'basemoben', e.target.value)}
                         className="inline-component"
                         underlineStyle={customUnderLineStyle}
                     />
@@ -56,14 +56,14 @@ export default class PlanDesign extends React.Component {
                         underlineStyle={customUnderLineStyle}
                         style={styles.FIO}
                         value={compPropData.FIO}
-                        onToggle={(e, value) => myProps.onChange("PlanDesign", 'FIO', value)}
+                        onToggle={(e, value) => myProps.onChange("planDesign", 'FIO', value)}
                     />
                     <Toggle
                         label="Extended Own Occupation Rider? (Y/N)"
                         className="inline-component"
                         style={styles.Occupation}
                         value={compPropData.occupationRider}
-                        onToggle={(e, value) => myProps.onChange("PlanDesign", 'occupationRider', value)}
+                        onToggle={(e, value) => myProps.onChange("planDesign", 'occupationRider', value)}
                     />
                 </PlanContainer>
                 <hr/>
